@@ -3,7 +3,33 @@
 export default {
     props: {
         film: Object
-    }
+    },
+    data() {
+        return {
+            flag: false,
+        }
+    },
+    created() {
+        this.getFlagList();
+    },
+    methods: {
+        getFlagList() {
+            switch (this.film.original_language) {
+                case 'it':
+                    this.flag = true;
+                    break;
+                case 'fr':
+                    this.flag = true;
+                    break;
+                case 'de':
+                    this.flag = true;
+                    break;
+                case 'es':
+                    this.flag = true;
+                    break;
+            }
+        }
+    },
 }
 </script>
 
@@ -18,7 +44,11 @@ export default {
             <strong> Titolo Originale: </strong>
             <span>{{film.original_title}}</span>
         </div>
-        <div>
+        <div v-if="flag">
+            <strong> Lingua: </strong>
+            <span :class="`fi fi-${film.original_language}`"></span>
+        </div>
+        <div v-else>
             <strong> Lingua: </strong>
             <span>{{film.original_language}}</span>
         </div>
