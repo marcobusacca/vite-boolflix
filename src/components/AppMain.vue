@@ -1,7 +1,13 @@
 <!-- JAVASCRIPT & VUE.JS -->
 <script>
-export default {
+// IMPORTO APP_CARD
+import AppCard from './AppCard.vue';
 
+export default {
+    components: {
+        // DICHIARO APP_CARD
+        AppCard
+    }
 }
 </script>
 
