@@ -22,6 +22,8 @@ export default {
 
 <!-- TEMPLATE HTML -->
 <template lang="">
+  <AppHeader/>
+  <AppMain/>
 </template>
 
 <!-- STYLE SCSS -->
