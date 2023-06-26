@@ -1,7 +1,13 @@
 <!-- JAVASCRIPT & VUE.JS -->
 <script>
-export default {
+// IMPORTO APP_HEADER
+import AppHeader from './components/AppHeader.vue';
 
+export default {
+  components: {
+    // DICHIARO APP_HEADER
+    AppHeader,
+  }
 }
 </script>
 
