@@ -13,6 +13,9 @@ export default {
 
 <!-- TEMPLATE HTML -->
 <template lang="">
+    <main>
+        
+    </main>
 </template>
 
 <!-- STYLE SCSS -->
