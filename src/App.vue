@@ -1,5 +1,8 @@
 <!-- JAVASCRIPT & VUE.JS -->
 <script>
+// IMPORTO AXIOS
+import axios from 'axios';
+
 // IMPORTO APP_HEADER
 import AppHeader from './components/AppHeader.vue';
 
