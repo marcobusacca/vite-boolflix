@@ -19,13 +19,36 @@ export default {
 
     // DICHIARO APP_MAIN
     AppMain
+  },
+  data() {
+    return {
+      // DICHIARO STORE.JS
+      store
+    }
+  },
+  methods: {
+    getFilm() {
+      // CONTROLLO CHE L'UTENTE ABBIA INSERITO UNA STRINGA NELLA SEARCH-BAR
+      if (store.userSearch !== '') {
+
+        // CREO L'URL PER LA CHIAMATA API FILM CON IL FILTRAGGIO RICHIESTO DALL'UTENTE
+        const filmUrl = `${store.moviesApiUri}?api_key=${store.apiKey}&query=${store.userSearch}`;
+
+        // EFFETTUO LA CHIAMATA API PER OTTENERE I FILM RICERCATI DALL'UTENTE
+        axios.get(filmUrl).then((result) => {
+
+          // INSERISCO DENTRO L'ARRAY MOVIES_LIST GLI OGGETTI OTTENUTI DALLA CHIAMATA API
+          store.moviesList = result.data.results;
+        })
+      }
+    }
   }
 }
 </script>
 
 <!-- TEMPLATE HTML -->
 <template lang="">
-  <AppHeader/>
+  <AppHeader @search="getFilm"/>
   <AppMain/>
 </template>
 
