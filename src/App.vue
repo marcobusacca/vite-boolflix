@@ -3,6 +3,9 @@
 // IMPORTO AXIOS
 import axios from 'axios';
 
+// IMPORTO STORE.JS
+import { store } from './store.js';
+
 // IMPORTO APP_HEADER
 import AppHeader from './components/AppHeader.vue';
 
