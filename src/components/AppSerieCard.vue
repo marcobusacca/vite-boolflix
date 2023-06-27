@@ -12,7 +12,6 @@ export default {
     },
     created() {
         this.getFlagList();
-        console.log(this.tranformVote)
     },
     methods: {
         getFlagList() {
