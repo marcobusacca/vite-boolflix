@@ -41,10 +41,10 @@ export default {
             <div class="row" v-if="store.moviesList.length !== 0">
                 <!-- Main Title Movie Col -->
                 <div class="col-12 main-title-col">
-                    <h2 class="fs-1 fw-bold">FILM</h2>
+                    <h2 class="fs-1 fw-bold text-center">FILM</h2>
                 </div>
                 <!-- App Movie Card Col -->
-                <div class="col-3 my-3" v-for="(film, index) in store.moviesList" :key="index">
+                <div class="col-12 col-md-6 col-lg-3 my-3" v-for="(film, index) in store.moviesList" :key="index">
                     <AppMovieCard :film="film" :imageUri="store.imageUri"/>
                 </div>
             </div>
@@ -52,10 +52,10 @@ export default {
             <div class="row" v-if="store.seriesList.length !== 0">
                 <!-- Main Title Serie Col -->
                 <div class="col-12 main-title-col">
-                    <h2 class="fs-1 fw-bold">SERIE TV</h2>
+                    <h2 class="fs-1 fw-bold text-center">SERIE TV</h2>
                 </div>
                 <!-- App Serie Card Col -->
-                <div class="col-3 my-3" v-for="(serie, index) in store.seriesList" :key="index">
+                <div class="col-12 col-md-6 col-lg-3 my-3" v-for="(serie, index) in store.seriesList" :key="index">
                     <AppSerieCard :serie="serie" :imageUri="store.imageUri"/>
                 </div>
             </div>
@@ -66,7 +66,7 @@ export default {
             <div class="row error-row">
                 <!-- Error Col -->
                 <div class="col-12">
-                    <h2 class="fs-1 fw-bold">Nessun elemento trovato</h2>
+                    <h2 class="fs-1 fw-bold text-center">Nessun elemento trovato</h2>
                 </div>
             </div>
         </div>
@@ -89,10 +89,6 @@ export default {
 
     .error-row {
         padding: 50px 0;
-
-        .col-12 {
-            text-align: center;
-        }
     }
 }
 </style>

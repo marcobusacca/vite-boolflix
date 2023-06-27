@@ -70,7 +70,7 @@ export default {
             </div>
             <!-- Voto -->
             <div class="class-star">
-                <i :class="tranformVote > 0 ? 'fa-solid fa-star fa-xl fa-xl' : 'fa-regular fa-star fa-xl'"></i>
+                <i :class="tranformVote > 0 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
                 <i :class="tranformVote > 1 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
                 <i :class="tranformVote > 2 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
                 <i :class="tranformVote > 3 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
