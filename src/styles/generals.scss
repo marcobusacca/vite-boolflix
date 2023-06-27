@@ -24,4 +24,40 @@ body {
     header h1 {
         font-family: 'Bebas Neue', sans-serif;
     }
+
+    main .app-card {
+        cursor: pointer;
+
+        &:hover .card-poster {
+            display: none;
+        }
+
+        &:hover .card-details {
+            display: block;
+        }
+
+        .card-poster img {
+            width: 100%;
+            aspect-ratio: 2/3;
+        }
+
+        .card-details {
+            height: 100%;
+            aspect-ratio: 2/3;
+            padding: 30px 20px;
+            background-color: black;
+            border: 1px solid #fff;
+            color: #fff;
+            display: none;
+
+            div {
+                margin: 20px 0;
+            }
+
+            .card-flag {
+                text-align: center;
+                padding: 20px 0;
+            }
+        }
+    }
 }

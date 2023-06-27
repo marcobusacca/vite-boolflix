@@ -45,10 +45,12 @@ export default {
 
 <!-- TEMPLATE HTML -->
 <template lang="">
-    <div class="card" style="width: 18rem;">
-        <!-- Poster -->
-        <img class="card-img-top" :src="`${imageUri}${film.poster_path}`" :alt="film.title">
-        <div class="card-body">
+    <div class="app-card">
+        <div class="card-poster">
+            <!-- Poster -->
+            <img :src="`${imageUri}${film.poster_path}`" :alt="film.title">
+        </div>
+        <div class="card-details">
             <!-- Titolo -->
             <div>
                 <strong> Titolo: </strong>
@@ -60,8 +62,7 @@ export default {
                 <span>{{film.original_title}}</span>
             </div>
             <!-- Lingua Flag -->
-            <div v-if="flag">
-                <strong> Lingua: </strong>
+            <div v-if="flag" class="card-flag">
                 <span :class="`fi fi-${film.original_language}`"></span>
             </div>
             <!-- Lingua String -->
