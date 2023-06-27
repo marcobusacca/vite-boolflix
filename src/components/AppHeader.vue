@@ -20,9 +20,9 @@ export default {
             <div class="row">
                 <!-- Head Title Col -->
                 <div class="col-6">
-                    <!-- Head Title Content -->
-                    <div class="head-title-content">
-                        <h1>BOOLFLIX</h1>
+                    <!-- Header Title Content -->
+                    <div class="header-title-content">
+                        <h1 class="f-bebas-neue">BOOLFLIX</h1>
                     </div>
                 </div>
                 <!-- Search Bar Col -->
@@ -46,8 +46,9 @@ export default {
 @use '../styles/partials/variables' as *;
 
 header {
-    background-color: black;
+    height: 150px;
     padding: 20px;
+    background-color: black;
 
     .row {
         align-items: center;

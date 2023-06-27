@@ -46,38 +46,35 @@ export default {
 <!-- TEMPLATE HTML -->
 <template lang="">
     <div class="app-card">
-        <div class="card-poster">
+        <div class="card-poster" :style="serie.poster_path === null ? 'display: none' : ''">
             <!-- Poster -->
             <img :src="`${imageUri}${serie.poster_path}`" :alt="serie.name">
         </div>
-        <div class="card-details">
+        <div class="card-details" :style="serie.poster_path === null ? 'display: block' : ''">
             <!-- Titolo -->
             <div>
-                <strong> Titolo: </strong>
                 <span>{{serie.name}}</span>
             </div>
             <!-- Titolo Originale -->
-            <div>
-                <strong> Titolo Originale: </strong>
+            <div v-if="serie.name !== serie.original_name">
                 <span>{{serie.original_name}}</span>
             </div>
             <!-- Lingua Flag -->
-            <div v-if="flag" class="card-flag">
+            <div class="card-language" v-if="flag">
                 <span :class="`fi fi-${serie.original_language}`"></span>
             </div>
             <!-- Lingua String -->
-            <div v-else>
+            <div class="card-language" v-else>
                 <strong> Lingua: </strong>
                 <span>{{serie.original_language}}</span>
             </div>
             <!-- Voto -->
-            <div>
-                <strong> Voto: </strong>
-                <i :class="tranformVote > 0 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
-                <i :class="tranformVote > 1 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
-                <i :class="tranformVote > 2 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
-                <i :class="tranformVote > 3 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
-                <i :class="tranformVote > 4 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
+            <div class="class-star">
+                <i :class="tranformVote > 0 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
+                <i :class="tranformVote > 1 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
+                <i :class="tranformVote > 2 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
+                <i :class="tranformVote > 3 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
+                <i :class="tranformVote > 4 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
             </div>
         </div>
     </div>
