@@ -12,6 +12,7 @@ export default {
     },
     created() {
         this.getFlagList();
+        console.log(this.tranformVote)
     },
     methods: {
         getFlagList() {
@@ -72,16 +73,11 @@ export default {
             <!-- Voto -->
             <div>
                 <strong> Voto: </strong>
-                <i class="fa-solid fa-star" v-if="tranformVote > 0"></i>
-                <i class="fa-regular fa-star" v-else></i>
-                <i class="fa-solid fa-star" v-if="tranformVote > 1"></i>
-                <i class="fa-regular fa-star" v-else></i>
-                <i class="fa-solid fa-star" v-if="tranformVote > 2"></i>
-                <i class="fa-regular fa-star" v-else></i>
-                <i class="fa-solid fa-star" v-if="tranformVote > 3"></i>
-                <i class="fa-regular fa-star" v-else></i>
-                <i class="fa-solid fa-star" v-if="tranformVote > 4"></i>
-                <i class="fa-regular fa-star" v-else></i>
+                <i :class="tranformVote > 0 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
+                <i :class="tranformVote > 1 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
+                <i :class="tranformVote > 2 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
+                <i :class="tranformVote > 3 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
+                <i :class="tranformVote > 4 ? 'fa-solid fa-star' : 'fa-regular fa-star'"></i>
             </div>
         </div>
     </div>
