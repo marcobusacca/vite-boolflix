@@ -48,7 +48,6 @@ export default {
 
         // CHIAMATA API SERIES
 
-
         // RESETTO L'ARRAY SERIES_LIST
         store.seriesList = [];
 

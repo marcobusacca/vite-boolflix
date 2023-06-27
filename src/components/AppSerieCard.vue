@@ -29,12 +29,17 @@ export default {
                     this.flag = true;
                     break;
                 case 'en':
-                    this.film.original_language = 'gb';
+                    this.serie.original_language = 'gb';
                     this.flag = true;
                     break;
             }
         }
     },
+    computed: {
+        tranformVote() {
+            return Math.ceil(this.serie.vote_average / 2);
+        }
+    }
 }
 </script>
 
@@ -67,7 +72,7 @@ export default {
             <!-- Voto -->
             <div>
                 <strong> Voto: </strong>
-                <span>{{serie.vote_average}}</span>
+                <span>{{tranformVote}}</span>
             </div>
         </div>
     </div>

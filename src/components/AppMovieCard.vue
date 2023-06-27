@@ -35,6 +35,11 @@ export default {
             }
         }
     },
+    computed: {
+        tranformVote() {
+            return Math.ceil(this.film.vote_average / 2);
+        }
+    }
 }
 </script>
 
@@ -67,7 +72,7 @@ export default {
             <!-- Voto -->
             <div>
                 <strong> Voto: </strong>
-                <span>{{film.vote_average}}</span>
+                <span>{{tranformVote}}</span>
             </div>
         </div>
     </div>
