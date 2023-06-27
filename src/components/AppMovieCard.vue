@@ -72,7 +72,6 @@ export default {
             <!-- Voto -->
             <div>
                 <strong> Voto: </strong>
-                <span>{{tranformVote}}</span>
                 <i class="fa-solid fa-star" v-if="tranformVote > 0"></i>
                 <i class="fa-regular fa-star" v-else></i>
                 <i class="fa-solid fa-star" v-if="tranformVote > 1"></i>
