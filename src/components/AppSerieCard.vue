@@ -73,6 +73,16 @@ export default {
             <div>
                 <strong> Voto: </strong>
                 <span>{{tranformVote}}</span>
+                <i class="fa-solid fa-star" v-if="tranformVote > 0"></i>
+                <i class="fa-regular fa-star" v-else></i>
+                <i class="fa-solid fa-star" v-if="tranformVote > 1"></i>
+                <i class="fa-regular fa-star" v-else></i>
+                <i class="fa-solid fa-star" v-if="tranformVote > 2"></i>
+                <i class="fa-regular fa-star" v-else></i>
+                <i class="fa-solid fa-star" v-if="tranformVote > 3"></i>
+                <i class="fa-regular fa-star" v-else></i>
+                <i class="fa-solid fa-star" v-if="tranformVote > 4"></i>
+                <i class="fa-regular fa-star" v-else></i>
             </div>
         </div>
     </div>
