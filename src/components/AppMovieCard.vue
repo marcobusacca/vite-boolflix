@@ -27,6 +27,10 @@ export default {
                 case 'es':
                     this.flag = true;
                     break;
+                case 'en':
+                    this.film.original_language = 'gb';
+                    this.flag = true;
+                    break;
             }
         }
     },
@@ -36,6 +40,7 @@ export default {
 <!-- TEMPLATE HTML -->
 <template lang="">
     <div class="card">
+        Film
         <div>
             <strong> Titolo: </strong>
             <span>{{film.title}}</span>
