@@ -4,8 +4,22 @@
 // IMPORTO FLAG ICONS
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
 
+// IMPORTO FONT MONTSERRAT
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+// IMPORTO FONT BEBAS NEUE
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    header h1 {
+        font-family: 'Bebas Neue', sans-serif;
+    }
 }

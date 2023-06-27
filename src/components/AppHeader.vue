@@ -19,11 +19,21 @@ export default {
         <div class="container">
             <div class="row">
                 <!-- Head Title Col -->
-                <div class="col"></div>
+                <div class="col-6">
+                    <!-- Head Title Content -->
+                    <div class="head-title-content">
+                        <h1>BOOLFLIX</h1>
+                    </div>
+                </div>
                 <!-- Search Bar Col -->
-                <div class="col">
-                    <input type="text" name="film-search" id="film-search" placeholder="Cerca un film o una serie tv" v-model="store.userSearch" @keyup.enter="$emit('search')">
-                    <button @click="$emit('search')">Cerca</button>
+                <div class="col-6 search-bar-col">
+                    <!-- Search Bar Content -->
+                    <div class="search-bar-content">
+                        <!-- Search Bar Input -->
+                        <input type="text" name="film-search" id="film-search" placeholder="Cerca un film o una serie tv" v-model="store.userSearch" @keyup.enter="$emit('search')">
+                        <!-- Search Bar Button -->
+                        <button class="btn btn-danger" @click="$emit('search')">Cerca</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,4 +44,40 @@ export default {
 <style lang="scss" scoped>
 // IMPORTO VARIABLES.SCSS
 @use '../styles/partials/variables' as *;
+
+header {
+    background-color: black;
+    padding: 20px;
+
+    .row {
+        align-items: center;
+
+        h1 {
+            color: red;
+            font-size: 80px;
+        }
+
+        .search-bar-content {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            input {
+                width: 55%;
+                height: 35px;
+                padding: 0 10px;
+                border-color: black;
+            }
+
+            button {
+                height: 35px;
+                background-color: #e71429;
+                border-color: black;
+                border-radius: 0;
+            }
+        }
+    }
+}
 </style>
