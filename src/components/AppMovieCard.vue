@@ -2,7 +2,8 @@
 <script>
 export default {
     props: {
-        film: Object
+        film: Object,
+        imageUri: String
     },
     data() {
         return {
@@ -39,27 +40,35 @@ export default {
 
 <!-- TEMPLATE HTML -->
 <template lang="">
-    <div class="card">
-        Film
-        <div>
-            <strong> Titolo: </strong>
-            <span>{{film.title}}</span>
-        </div>
-        <div>
-            <strong> Titolo Originale: </strong>
-            <span>{{film.original_title}}</span>
-        </div>
-        <div v-if="flag">
-            <strong> Lingua: </strong>
-            <span :class="`fi fi-${film.original_language}`"></span>
-        </div>
-        <div v-else>
-            <strong> Lingua: </strong>
-            <span>{{film.original_language}}</span>
-        </div>
-        <div>
-            <strong> Voto: </strong>
-            <span>{{film.vote_average}}</span>
+    <div class="card" style="width: 18rem;">
+        <!-- Poster -->
+        <img class="card-img-top" :src="`${imageUri}${film.poster_path}`" :alt="film.title">
+        <div class="card-body">
+            <!-- Titolo -->
+            <div>
+                <strong> Titolo: </strong>
+                <span>{{film.title}}</span>
+            </div>
+            <!-- Titolo Originale -->
+            <div>
+                <strong> Titolo Originale: </strong>
+                <span>{{film.original_title}}</span>
+            </div>
+            <!-- Lingua Flag -->
+            <div v-if="flag">
+                <strong> Lingua: </strong>
+                <span :class="`fi fi-${film.original_language}`"></span>
+            </div>
+            <!-- Lingua String -->
+            <div v-else>
+                <strong> Lingua: </strong>
+                <span>{{film.original_language}}</span>
+            </div>
+            <!-- Voto -->
+            <div>
+                <strong> Voto: </strong>
+                <span>{{film.vote_average}}</span>
+            </div>
         </div>
     </div>
 </template>

@@ -34,7 +34,7 @@ export default {
             <div class="row">
                 FILM
                 <div class="col-12" v-for="(film, index) in store.moviesList" :key="index">
-                    <AppMovieCard :film="film"/>
+                    <AppMovieCard :film="film" :imageUri="store.imageUri"/>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@ export default {
             <div class="row">
                 SERIE TV
                 <div class="col-12" v-for="(serie, index) in store.seriesList" :key="index">
-                    <AppSerieCard :serie="serie"/>
+                    <AppSerieCard :serie="serie" :imageUri="store.imageUri"/>
                 </div>
             </div>
         </div>

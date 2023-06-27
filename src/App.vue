@@ -33,6 +33,9 @@ export default {
 
         // CHIAMATA API MOVIES
 
+        // RESETTO L'ARRAY MOVIES_LIST
+        store.moviesList = [];
+
         // CREO L'URL PER LA CHIAMATA API FILM CON IL FILTRAGGIO RICHIESTO DALL'UTENTE
         const moviesUrl = `${store.moviesApiUri}?api_key=${store.apiKey}&query=${store.userSearch}`;
 
@@ -44,6 +47,10 @@ export default {
         })
 
         // CHIAMATA API SERIES
+
+
+        // RESETTO L'ARRAY SERIES_LIST
+        store.seriesList = [];
 
         // CREO L'URL PER LA CHIAMATA API SERIE TV CON IL FILTRAGGIO RICHIESTO DALL'UTENTE
         const seriesUrl = `${store.seriesApiUri}?api_key=${store.apiKey}&query=${store.userSearch}`;
