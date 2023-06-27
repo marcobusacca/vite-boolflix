@@ -26,10 +26,6 @@ export default {
       store
     }
   },
-  created() {
-    // RICHIAMO LA FUNZIONE CHECK_SEARCH
-    this.checkSearch();
-  },
   methods: {
     getList() {
       // CONTROLLO CHE L'UTENTE ABBIA INSERITO UNA STRINGA NELLA SEARCH-BAR

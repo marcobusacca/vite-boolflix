@@ -11,6 +11,6 @@ export const store = reactive({
     moviesList: [],
     seriesList: [],
     userSearch: '',
-    wrongSearch: false,
+    wrongSearch: true,
     loading: false
 });

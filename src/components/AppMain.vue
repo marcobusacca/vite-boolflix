@@ -38,7 +38,7 @@ export default {
         <!-- Movies & Series Container -->
         <div class="container" v-if="store.wrongSearch === false && store.loading === false">
             <!-- Movies Row -->
-            <div class="row">
+            <div class="row" v-if="store.moviesList.length !== 0">
                 <!-- Main Title Movie Col -->
                 <div class="col-12 main-title-col">
                     <h2 class="fs-1 fw-bold">FILM</h2>
@@ -49,7 +49,7 @@ export default {
                 </div>
             </div>
             <!-- Series Row -->
-            <div class="row">.
+            <div class="row" v-if="store.seriesList.length !== 0">
                 <!-- Main Title Serie Col -->
                 <div class="col-12 main-title-col">
                     <h2 class="fs-1 fw-bold">SERIE TV</h2>
@@ -80,15 +80,19 @@ export default {
 // IMPORTO VARIABLES.SCSS
 @use '../styles/partials/variables' as *;
 
-.main-title-col {
-    padding: 60px 0;
-}
+.container {
+    padding-bottom: 100px;
 
-.error-row {
-    padding: 50px 0;
+    .main-title-col {
+        padding: 60px 0;
+    }
 
-    .col-12 {
-        text-align: center;
+    .error-row {
+        padding: 50px 0;
+
+        .col-12 {
+            text-align: center;
+        }
     }
 }
 </style>

@@ -49,18 +49,20 @@ body {
             border: 1px solid #fff;
             color: #fff;
             display: none;
+            overflow-y: auto;
 
             div {
                 margin: 20px 0;
                 text-align: center;
             }
 
-            .card-language {
-                padding: 20px 0;
-            }
-
             .class-star {
                 color: #FDD663;
+            }
+
+            .card-language,
+            .card-overview {
+                padding: 20px 0;
             }
         }
     }

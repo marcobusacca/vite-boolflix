@@ -76,6 +76,13 @@ export default {
                 <i :class="tranformVote > 3 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
                 <i :class="tranformVote > 4 ? 'fa-solid fa-star fa-xl' : 'fa-regular fa-star fa-xl'"></i>
             </div>
+            <!-- Trama -->
+            <div class="card-overview" v-if="serie.overview !== ''">
+                <div>
+                    <strong> Trama </strong>
+                </div>
+                <p>{{serie.overview}}</p>
+            </div>
         </div>
     </div>
 </template>
